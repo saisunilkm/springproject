@@ -21,7 +21,7 @@ public class UpdateAgeServiceImpl implements UpdateAgeService{
                 details.save(detailsEntity);
                 return true;
             }
-        }catch (BeansException e){
+        } catch (BeansException e){
             e.printStackTrace();
         }
         return false;

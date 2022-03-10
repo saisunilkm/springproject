@@ -18,7 +18,7 @@ public class StudentController {
     String student(@RequestBody Student student) {
         if (student != null) {
             service.saveStudent(student);
-            return "Data has been saved successfully....";
+            return "Data has been saved successfully.....";
 
         }else{
             return "Data not saved";

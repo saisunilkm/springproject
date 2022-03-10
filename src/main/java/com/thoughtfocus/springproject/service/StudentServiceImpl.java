@@ -26,7 +26,7 @@ public class StudentServiceImpl implements StudentService{
                 details.save(entity);
                 return true;
             }
-        }catch (BeansException e){
+        } catch (BeansException e){
             e.printStackTrace();
         }
         return false;
