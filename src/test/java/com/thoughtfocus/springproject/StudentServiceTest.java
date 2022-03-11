@@ -28,7 +28,7 @@ public class StudentServiceTest {
             student.setName("Sunil");
             student.setAge(22);
             student.setId(101);
-            student.setEmail("sunil@258");
+            student.setEmail("sunil@258 ");
         }
         @Test
         public void ValidateStudentTest() {
