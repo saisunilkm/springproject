@@ -5,5 +5,5 @@ import com.thoughtfocus.springproject.dto.Student;
 
 
 public interface StudentService {
-    public boolean saveStudent (Student student);
+    public boolean saveStudent  (Student student);
 }
