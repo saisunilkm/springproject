@@ -1,12 +1,15 @@
 package com.thoughtfocus.springproject.dto;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
-@AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class StudentDto {
+public class Student {
     private int id;
     private String name;
     private String email;

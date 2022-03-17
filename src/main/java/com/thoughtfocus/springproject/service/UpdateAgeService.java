@@ -1,7 +1,7 @@
 package com.thoughtfocus.springproject.service;
 
-import com.thoughtfocus.springproject.dto.UpdateStudentAgeDto;
+import com.thoughtfocus.springproject.dto.UpdateAgeDto;
 
 public interface UpdateAgeService {
-    public boolean updateAgeUsingId (UpdateStudentAgeDto ageDto);
+    public boolean updateAgeUsingId  (UpdateAgeDto ageDto);
 }

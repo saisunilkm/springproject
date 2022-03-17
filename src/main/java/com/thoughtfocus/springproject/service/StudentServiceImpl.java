@@ -1,10 +1,11 @@
 package com.thoughtfocus.springproject.service;
 
-import com.thoughtfocus.springproject.entity.StudentDetailsEntity;
-import com.thoughtfocus.springproject.dto.StudentDto;
-import com.thoughtfocus.springproject.repository.StudentRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.thoughtfocus.springproject.detailsentity.DetailsEntity;
+import com.thoughtfocus.springproject.dto.Student;
+import com.thoughtfocus.springproject.repository.Details;
+import com.thoughtfocus.springproject.detailsentity.DetailsEntity;
+import com.thoughtfocus.springproject.dto.Student;
+import com.thoughtfocus.springproject.repository.Details;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,21 +13,21 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class StudentServiceImpl implements StudentService{
-    Logger logger = LoggerFactory.getLogger(StudentServiceImpl.class);
-    @Autowired
-    StudentRepository details;
+    @Autowired 
+    Details details;
+
 
     @Override
-    public boolean saveStudent(StudentDto student) {
+    public boolean saveStudent(Student student) {
         try {
             if(student!=null){
-                StudentDetailsEntity entity = new StudentDetailsEntity();
+                DetailsEntity entity = new DetailsEntity();
                 BeanUtils.copyProperties(student,entity);
                 details.save(entity);
                 return true;
             }
         } catch (BeansException e){
-            logger.error(e.getMessage());
+            e.printStackTrace();
         }
         return false;
     }
