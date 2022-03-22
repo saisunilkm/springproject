@@ -1,9 +1,8 @@
 package com.thoughtfocus.springproject.service;
 
-import com.thoughtfocus.springproject.dto.Student;
-import com.thoughtfocus.springproject.dto.Student;
+import com.thoughtfocus.springproject.dto.StudentDto;
 
 
 public interface StudentService {
-    public boolean saveStudent  (Student student);
+    public boolean saveStudent  (StudentDto studentdto);
 }
